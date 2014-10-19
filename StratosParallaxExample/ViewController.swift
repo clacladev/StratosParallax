@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         var exampleViews: [UIView] = []
         
-        var imageNames = ["background", "clouds", "mountains", "hill_left", "hill_right", "hill_middle", "sea"]
+        var imageNames = ["background", "clouds", "hills", "sea"]
         
         for imageName in imageNames {
             let imageView = UIImageView(frame: self.view.bounds)
