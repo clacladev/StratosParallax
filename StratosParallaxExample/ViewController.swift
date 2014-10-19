@@ -20,8 +20,10 @@ class ViewController: UIViewController {
 
         super.viewDidLoad()
         
-        // Enough to set the views
+        // Setup the StratosParallaxView
         stratosParallaxView.viewsToAnimate = exampleViewsForParallax()
+        stratosParallaxView.strength = .Strong
+        //stratosParallaxView.strengthPoints = 300.0 // Alternative method to set the strength
     }
     
     
@@ -56,7 +58,8 @@ class ViewController: UIViewController {
         var newFrame = self.view.bounds
         newFrame.size = size
         
-        // Update the frame of the views to animate
+        // Update the frame of the views to animate.
+        // This is not mandatory. If you want to keep the frame of the views always the same
         for viewToAnimate in stratosParallaxView.viewsToAnimate {
             viewToAnimate.frame = newFrame
         }

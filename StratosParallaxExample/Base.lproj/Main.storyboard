@@ -16,17 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fa-PA-bYi" customClass="StratosParallaxView" customModule="StratosParallaxExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fa-PA-bYi" customClass="StratosParallaxView" customModule="StratosParallaxExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="-1" width="600" height="600"/>
-                                <color key="backgroundColor" red="1" green="0.3578356345" blue="0.48243229269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.8477782020400032" blue="0.1410997508388353" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7n-64-mpt">
+                                <rect key="frame" x="235" y="78" width="130" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.3578356345" blue="0.48243229269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2aQ-fo-wz2"/>
+                                    <constraint firstAttribute="width" constant="130" id="Wle-79-Z4i"/>
+                                </constraints>
+                                <state key="normal" title="A button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6fa-PA-bYi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6hX-rL-0UN"/>
                             <constraint firstAttribute="trailing" secondItem="6fa-PA-bYi" secondAttribute="trailing" id="9Yv-Qp-Z8M"/>
-                            <constraint firstItem="6fa-PA-bYi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vr9-0e-ADv"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6fa-PA-bYi" secondAttribute="bottom" id="gUs-RC-2EH"/>
+                            <constraint firstItem="H7n-64-mpt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="CEC-7v-Muy"/>
+                            <constraint firstAttribute="centerX" secondItem="H7n-64-mpt" secondAttribute="centerX" id="TRv-fZ-yQK"/>
+                            <constraint firstItem="6fa-PA-bYi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-1" id="Vr9-0e-ADv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6fa-PA-bYi" secondAttribute="bottom" constant="1" id="gUs-RC-2EH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -35,6 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="307" y="294"/>
         </scene>
     </scenes>
 </document>

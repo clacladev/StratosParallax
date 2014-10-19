@@ -11,7 +11,9 @@ import UIKit
 
 
 enum StratosParallaxStrength: Double {
-    case Strong = 100.0
+    case Strong = 150.0
+    case Medium = 100.0
+    case Soft = 50.0
 }
 
 
@@ -34,17 +36,30 @@ class StratosParallaxView: UIView {
                 self.addSubview(viewToAnimate)
             }
             
-            fixViewsFrameForParallax()
-            applyParallaxEffect()
+            cacheViewsFrames()
+            self.setNeedsLayout()
         }
     }
     
-    // Strenght of the parallax effect
-    var strength = StratosParallaxStrength.Strong
+    // Strenght of the parallax effect using the predefined strengths levels
+    var strength: StratosParallaxStrength = .Medium {
+        didSet {
+            self.strengthPoints = strength.toRaw()
+            self.setNeedsLayout()
+        }
+    }
+    
+    // Strenght of the parallax effect using the movement in points
+    var strengthPoints: Double = StratosParallaxStrength.Medium.toRaw() {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
     
     
     
     // MARK: - Private properties
+    var viewsFrames: [CGRect] = []
     
     
     
@@ -78,16 +93,29 @@ class StratosParallaxView: UIView {
     
     
     
+    func cacheViewsFrames() {
+        
+        viewsFrames = []
+        for view in viewsToAnimate {
+            viewsFrames.append(view.bounds)
+        }
+    }
+    
+    
+    
     /**
     Increase the size of the views' frames, so when the parallax move the image, the views' edges are never shown
     */
-    func fixViewsFrameForParallax() {
+    func fixViewsFrames() {
         
-        let additionalSpaceNeededForParallax = CGFloat(strength.toRaw())
+        let additionalSpaceNeededForParallax = CGFloat(strengthPoints)
         
-        for view in viewsToAnimate {
+        for index in 0 ..< viewsToAnimate.count {
             
-            var newFrame = view.bounds
+            let originalFrame = viewsFrames[index]
+            var view = viewsToAnimate[index]
+        
+            var newFrame = originalFrame
             newFrame.origin.x = additionalSpaceNeededForParallax / -2.0
             newFrame.origin.y = additionalSpaceNeededForParallax / -2.0
             newFrame.size.width += additionalSpaceNeededForParallax
@@ -107,10 +135,10 @@ class StratosParallaxView: UIView {
     func applyParallaxEffect() {
         
         // The most background view will move in the opposite direction of the most foreground one
-        let startingStrength = strength.toRaw() / -2.0
+        let startingStrength = strengthPoints / -2.0
         
         // Calculate how much changes the strength of the effect per view
-        let strengthChangePerView = strength.toRaw() / (Double(viewsToAnimate.count) - 1)
+        let strengthChangePerView = strengthPoints / (Double(viewsToAnimate.count) - 1)
         
         // Apply the correct parallax strength values to the views
         for index in 0 ..< viewsToAnimate.count {
@@ -133,19 +161,17 @@ class StratosParallaxView: UIView {
         verticalInterpolation.minimumRelativeValue = strength * -1
         verticalInterpolation.maximumRelativeValue = strength
         
-        view.addMotionEffect(horizonalInterpolation)
-        view.addMotionEffect(verticalInterpolation)
+        view.motionEffects = [horizonalInterpolation, verticalInterpolation]
     }
     
     
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect)
-    {
-        // Drawing code
+    
+    override func layoutSubviews() {
+        
+        super.layoutSubviews()
+        
+        fixViewsFrames()
+        applyParallaxEffect()
     }
-    */
 
 }
