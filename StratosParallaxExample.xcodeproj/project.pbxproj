@@ -13,6 +13,7 @@
 		CA2915EB19F302710068FE09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2915EA19F302710068FE09 /* Images.xcassets */; };
 		CA2915EE19F302710068FE09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2915EC19F302710068FE09 /* LaunchScreen.xib */; };
 		CA2915FA19F302710068FE09 /* StratosParallaxExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2915F919F302710068FE09 /* StratosParallaxExampleTests.swift */; };
+		CA29160419F3029A0068FE09 /* StratosParallaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA29160319F3029A0068FE09 /* StratosParallaxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		CA2915F319F302710068FE09 /* StratosParallaxExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StratosParallaxExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2915F819F302710068FE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA2915F919F302710068FE09 /* StratosParallaxExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratosParallaxExampleTests.swift; sourceTree = "<group>"; };
+		CA29160319F3029A0068FE09 /* StratosParallaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StratosParallaxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				CA2915E319F302710068FE09 /* AppDelegate.swift */,
 				CA2915E519F302710068FE09 /* ViewController.swift */,
+				CA29160319F3029A0068FE09 /* StratosParallaxView.swift */,
 				CA2915E719F302710068FE09 /* Main.storyboard */,
 				CA2915EA19F302710068FE09 /* Images.xcassets */,
 				CA2915EC19F302710068FE09 /* LaunchScreen.xib */,
@@ -161,6 +164,7 @@
 				TargetAttributes = {
 					CA2915DD19F302710068FE09 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = G533U647J9;
 					};
 					CA2915F219F302710068FE09 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -213,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2915E619F302710068FE09 /* ViewController.swift in Sources */,
+				CA29160419F3029A0068FE09 /* StratosParallaxView.swift in Sources */,
 				CA2915E419F302710068FE09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +277,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -315,7 +321,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -407,6 +414,7 @@
 				CA2915FF19F302710068FE09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA29160019F302710068FE09 /* Build configuration list for PBXNativeTarget "StratosParallaxExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +423,7 @@
 				CA29160219F302710068FE09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

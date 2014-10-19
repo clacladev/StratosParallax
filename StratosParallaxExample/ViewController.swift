@@ -8,18 +8,45 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var stratosParallaxView: StratosParallaxView!
+    
+    
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Enough to set the views
+        stratosParallaxView.viewsToAnimate = exampleViewsForParallax()
     }
-
+    
+    
+    
+    func exampleViewsForParallax() -> [UIView] {
+        
+        var exampleViews: [UIView] = []
+        
+        var imageNames = ["background", "clouds", "mountains", "hill_left", "hill_right", "hill_middle", "sea"]
+        
+        for imageName in imageNames {
+            let imageView = UIImageView(frame: self.view.bounds)
+            imageView.image = UIImage(named: imageName)
+            imageView.contentMode = UIViewContentMode.ScaleAspectFill
+            exampleViews.append(imageView)
+            
+        }
+        
+        return exampleViews
+    }
+    
+    
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        stratosParallaxView.viewsToAnimate = []
     }
-
 
 }
 
