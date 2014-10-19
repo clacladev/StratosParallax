@@ -47,6 +47,20 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         stratosParallaxView.viewsToAnimate = []
     }
+    
+    
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        
+        // Calculate the other
+        var newFrame = self.view.bounds
+        newFrame.size = size
+        
+        // Update the frame of the views to animate
+        for viewToAnimate in stratosParallaxView.viewsToAnimate {
+            viewToAnimate.frame = newFrame
+        }
+    }
 
 }
 
