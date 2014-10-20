@@ -59,7 +59,7 @@ class StratosParallaxView: UIView {
     
     
     // MARK: - Private properties
-    var viewsFrames: [CGRect] = []
+    private var viewsFrames: [CGRect] = []
     
     
     
@@ -86,14 +86,14 @@ class StratosParallaxView: UIView {
     
     
     
-    func initializer() {
+    private func initializer() {
         
         self.backgroundColor = UIColor.clearColor()
     }
     
     
     
-    func cacheViewsFrames() {
+    private func cacheViewsFrames() {
         
         viewsFrames = []
         for view in viewsToAnimate {
@@ -106,7 +106,7 @@ class StratosParallaxView: UIView {
     /**
     Increase the size of the views' frames, so when the parallax move the image, the views' edges are never shown
     */
-    func fixViewsFrames() {
+    private func fixViewsFrames() {
         
         let additionalSpaceNeededForParallax = CGFloat(strengthPoints)
         
@@ -132,7 +132,7 @@ class StratosParallaxView: UIView {
     Each view will have a different min/max motion effect relative value, so each view moves in a different fashion.
     This will make the parallax effect more realistic
     */
-    func applyParallaxEffect() {
+    private func applyParallaxEffect() {
         
         // The most background view will move in the opposite direction of the most foreground one
         let startingStrength = strengthPoints / -2.0
@@ -151,7 +151,7 @@ class StratosParallaxView: UIView {
     
     
     
-    func applyParallaxMotionEffectToView(view: UIView, strength: Double) {
+    private func applyParallaxMotionEffectToView(view: UIView, strength: Double) {
         
         let horizonalInterpolation = UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongHorizontalAxis)
         horizonalInterpolation.minimumRelativeValue = strength * -1
