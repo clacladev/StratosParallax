@@ -13,7 +13,7 @@ It is made in *swift*, but it works just fine in an Objective-C project.
 The goal is to help you make a multi-view parallax effect like the one in the opening screen of the iOS game [The Boxtrolls](https://itunes.apple.com/us/app/the-boxtrolls-slide-n-sneak/id911631097?mt=8).
 
 Here's a 4 view parallax made with StratosParallax (bg, mountains, hills and sea + button on top):
-![StratosParallax example](example.gif)
+![StratosParallax example](http://tugulab.org/files/StratosParallax/example.gif)
 
 It's the same you get downloading the project.
 
@@ -24,7 +24,7 @@ Add a **StratosParallaxView** view-component to your view (using Interface Build
 You can add anything that inherits from UIView. Optionally you can set the strength of the parallax effect (with some predefined values or in number of points).
 
 Here you can see how the views in the StratosParallaxView are layered:
-![StratosParallax structure](structure.gif)
+![StratosParallax structure](http://tugulab.org/files/StratosParallax/structure.gif)
 
 
 #* How-to use this library?
