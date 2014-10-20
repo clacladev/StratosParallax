@@ -13,7 +13,7 @@ It is made in *swift*, but it works just fine in an Objective-C project.
 The goal is to help you make a multi-view parallax effect like the one in the opening screen of the iOS game [The Boxtrolls](https://itunes.apple.com/us/app/the-boxtrolls-slide-n-sneak/id911631097?mt=8).
 
 Here's a 4 view parallax made with StratosParallax (bg, mountains, hills and sea + button on top):
-![StratosParallax example](http://c0393da1d298edea0990-33e475e3e342d2aa8acfcc1c6ae6f136.r94.cf2.rackcdn.com/example.gif)
+![StratosParallax example](http://c0393da1d298edea0990-33e475e3e342d2aa8acfcc1c6ae6f136.r94.cf2.rackcdn.com/example_parallax.gif)
 
 It's the same you get downloading the project.
 
