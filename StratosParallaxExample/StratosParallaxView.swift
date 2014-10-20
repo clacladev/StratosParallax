@@ -11,8 +11,8 @@ import UIKit
 
 
 enum StratosParallaxStrength: Double {
-    case Strong = 150.0
-    case Medium = 100.0
+    case Strong = 300.0
+    case Medium = 150.0
     case Soft = 50.0
 }
 
