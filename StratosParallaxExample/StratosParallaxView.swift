@@ -44,13 +44,13 @@ class StratosParallaxView: UIView {
     // Strenght of the parallax effect using the predefined strengths levels
     var strength: StratosParallaxStrength = .Medium {
         didSet {
-            self.strengthPoints = strength.toRaw()
+            self.strengthPoints = strength.rawValue
             self.setNeedsLayout()
         }
     }
     
     // Strenght of the parallax effect using the movement in points
-    var strengthPoints: Double = StratosParallaxStrength.Medium.toRaw() {
+    var strengthPoints: Double = StratosParallaxStrength.Medium.rawValue {
         didSet {
             self.setNeedsLayout()
         }
