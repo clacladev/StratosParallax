@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>StratosParallax.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>StratosParallaxExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>CA2915F219F302710068FE09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAB2A98419F8EF0200840539</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAB2A98E19F8EF0200840539</key>
 		<dict>
 			<key>primary</key>
 			<true/>

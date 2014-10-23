@@ -10,7 +10,7 @@ import UIKit
 
 
 
-enum StratosParallaxStrength: Double {
+public enum StratosParallaxStrength: Double {
     case Strong = 300.0
     case Medium = 150.0
     case Soft = 50.0
@@ -18,12 +18,12 @@ enum StratosParallaxStrength: Double {
 
 
 
-class StratosParallaxView: UIView {
+public class StratosParallaxView: UIView {
     
     // MARK: - Public interface
     
     // Array of views to animate with the parallax effect. The last view in the array will be the most foreground one
-    var viewsToAnimate: [UIView] = [] {
+    public var viewsToAnimate: [UIView] = [] {
         willSet {
             // Remove the views added previously
             for viewToAnimate in viewsToAnimate {
@@ -42,7 +42,7 @@ class StratosParallaxView: UIView {
     }
     
     // Strenght of the parallax effect using the predefined strengths levels
-    var strength: StratosParallaxStrength = .Medium {
+    public var strength: StratosParallaxStrength = .Medium {
         didSet {
             self.strengthPoints = strength.rawValue
             self.setNeedsLayout()
@@ -50,7 +50,7 @@ class StratosParallaxView: UIView {
     }
     
     // Strenght of the parallax effect using the movement in points
-    var strengthPoints: Double = StratosParallaxStrength.Medium.rawValue {
+    public var strengthPoints: Double = StratosParallaxStrength.Medium.rawValue {
         didSet {
             self.setNeedsLayout()
         }
@@ -65,21 +65,21 @@ class StratosParallaxView: UIView {
     
     // MARK: - App lifecyle
     
-    override init() {
+    override public init() {
         super.init()
         initializer()
     }
     
     
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         initializer()
     }
     
     
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initializer()
     }
@@ -166,7 +166,7 @@ class StratosParallaxView: UIView {
     
     
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         
         super.layoutSubviews()
         

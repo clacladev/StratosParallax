@@ -34,6 +34,20 @@
                ReferencedContainer = "container:StratosParallaxExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CAB2A98E19F8EF0200840539"
+               BuildableName = "StratosParallaxTests.xctest"
+               BlueprintName = "StratosParallaxTests"
+               ReferencedContainer = "container:StratosParallaxExample.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "CA2915F219F302710068FE09"
                BuildableName = "StratosParallaxExampleTests.xctest"
                BlueprintName = "StratosParallaxExampleTests"
+               ReferencedContainer = "container:StratosParallaxExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CAB2A98E19F8EF0200840539"
+               BuildableName = "StratosParallaxTests.xctest"
+               BlueprintName = "StratosParallaxTests"
                ReferencedContainer = "container:StratosParallaxExample.xcodeproj">
             </BuildableReference>
          </TestableReference>

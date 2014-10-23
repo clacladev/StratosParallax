@@ -29,8 +29,16 @@ Here you can see how the views in the StratosParallaxView are layered:
 
 #* How-to use this library?
 
-### Step 1:
-First you need to add the **StratosParallaxView.swift** file to your project.
+### Step 1, Intallation:
+You have two ways to install this module/framework/library.
+
+#### Option A: Frameworks (Better)
+Trasnform your XCode project into a workspace. Then add the StratosParallaxExample project to your workspace. Now goes in the Project, select your app *target* and add a new *Linked Framework*. Add the framework with name **StratosParallax.framework**.
+
+Remember that you should import the module (*import StratosParallax*) in the classes where you're going to use it.
+
+#### Option B: Copy
+Download the code and add to your project the file **StratosParallaxView.swift** . Start to use the new class methods.
 
 
 ### Step 2, option A: Interface Builder
@@ -41,6 +49,9 @@ In your view controller create an IBOutlet and connect it to the StratosParallax
 
 In your ViewController setup the **StratosParallaxView**. Like in the following example:
 
+	import UIKit
+	import StratosParallax
+	
 	class ViewController: UIViewController {
     
     @IBOutlet weak var stratosParallaxView: StratosParallaxView!
@@ -61,6 +72,9 @@ In your ViewController setup the **StratosParallaxView**. Like in the following 
 In your view controller instatiate the StratosParallaxView component and the setup it. 
 Here's an example:
 
+	import UIKit
+	import StratosParallax
+	
 	class ViewController: UIViewController {
     
       override func viewDidLoad() {
