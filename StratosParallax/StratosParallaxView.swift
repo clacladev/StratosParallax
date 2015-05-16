@@ -65,10 +65,10 @@ public class StratosParallaxView: UIView {
     
     // MARK: - App lifecyle
     
-    override public init() {
-        super.init()
-        initializer()
-    }
+//    override public init() {
+//        super.init()
+//        initializer()
+//    }
     
     
     
